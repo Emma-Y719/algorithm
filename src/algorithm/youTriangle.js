@@ -1,9 +1,11 @@
 const rl = require("readline").createInterface({ input: process.stdin });
 var iter = rl[Symbol.asyncIterator]();
 const readline = async () => (await iter.next()).value;
-
+// 给一个字母表，输出分别以y o u 三个字母为顶点的直角三角形个数
+// 输入： 行数n 列数m
+//       字母表
+// 输出： 直角三角形数量
 void async function () {
-    // Write your code here
     const [n, m] = (await readline()).split(' ').map(i => parseInt(i));
     const rowMap = new Array(n);
     const colMap = new Array(m);

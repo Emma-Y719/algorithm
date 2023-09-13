@@ -1,6 +1,11 @@
 const rl = require("readline").createInterface({ input: process.stdin });
 var iter = rl[Symbol.asyncIterator]();
 const readline = async () => (await iter.next()).value;
+//从左上角走到右下角，每秒走一步，和爆炸的炸弹同行和同列会被炸死
+//输入：T组数据
+//     地图的行列 n, m 
+//     地图 -1：障碍物 其他数字t：在t秒爆炸的炸弹
+//输出：到达目的地的最短时间，如果不能到达则返回-1     
 
 void async function () {
     // Write your code here

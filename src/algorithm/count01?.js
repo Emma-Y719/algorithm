@@ -1,7 +1,7 @@
 const rl = require("readline").createInterface({ input: process.stdin });
 var iter = rl[Symbol.asyncIterator]();
 const readline = async () => (await iter.next()).value;
-
+// 输入一个只有01的字符串，输出 所有前缀都满足1的个数都大于0的个数 的子串 的数量
 void async function () {
     const s = await readline();
     let res = 0;

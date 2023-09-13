@@ -1,5 +1,5 @@
-function pathNumber( root ) {
-    // write code here
+//给一棵树，节点值是0或1，输出满足1的数量比0的数量多1的路径数量（根节点到叶子节点的路径）
+function pathNumber(root) {
   let count0 = 0;
   let count1 = 0;
   // const path = [];
